@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@color/black"
+    tools:context=".VideoPlayerActivity">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/idRLVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true"
+            android:id="@+id/idVideoView"
+            />
+
+
+    </RelativeLayout>
+    <include layout="@layout/custom_controls"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
