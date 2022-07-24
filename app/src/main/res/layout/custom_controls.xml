@@ -6,16 +6,37 @@
     android:id="@+id/idRLControls"
     android:background="@color/black_shade_1">
 
-    <TextView
-        android:id="@+id/idTVVideoTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Video Title"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        />
+        android:layout_margin="1dp"
+        android:padding="4dp"
+        android:layout_alignParentTop="true"
+        >
+        <TextView
+            android:id="@+id/idTVVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Video Title"
+            android:textColor="@color/white" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/ic_lock"
+            app:tint="@color/white"/>
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,8 +55,9 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_backward"
-            app:tint="@color/yellow" />
+            android:src="@drawable/ic_backward_5sec"
+            android:onClick="BackwardVideo5Sec"
+            app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/idIBPlay"
@@ -52,8 +74,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_forward"
-            app:tint="@color/white" />
+            android:src="@drawable/ic_forward_5sec"
+            app:tint="@color/white"
+            android:onClick="ForwardVideo5Sec"
+            />
 
 
     </LinearLayout>
@@ -86,7 +110,16 @@
             android:textColor="@color/white"
             android:textSize="17sp"
             />
+        <ImageView
+            android:id="@+id/idIVFullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/ic_fullscreen"
+            app:tint="@color/white"/>
     </LinearLayout>
+
+
 
 
 </RelativeLayout>

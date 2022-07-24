@@ -67,18 +67,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                 }
             }
         });
-        backIB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                videoView.seekTo(videoView.getCurrentPosition()-1000);
-            }
-        });
-        forwordIB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                videoView.seekTo(videoView.getCurrentPosition()+1000);
-            }
-        });
+
 
         videoRL.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,6 +191,13 @@ public class VideoPlayerActivity extends AppCompatActivity {
             }
             decorView.setSystemUiVisibility(uiOption);
         }
+    }
+
+    public void ForwardVideo5Sec(View view){
+        videoView.seekTo(videoView.getCurrentPosition()+5000);
+    }
+    public void BackwardVideo5Sec(View view){
+        videoView.seekTo(videoView.getCurrentPosition()-5000);
     }
 
 }
